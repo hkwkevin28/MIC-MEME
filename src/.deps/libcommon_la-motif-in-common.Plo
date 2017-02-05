@@ -1,0 +1,33 @@
+libcommon_la-motif-in-common.lo: motif-in-common.c /usr/include/strings.h \
+ /usr/include/features.h /usr/include/stdc-predef.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /opt/intel/compilers_and_libraries_2016.3.210/linux/compiler/include/stddef.h \
+ /usr/include/xlocale.h motif-in-common.h motif-in-flags.h scanned-sequence.h \
+ string-match.h
+
+/usr/include/strings.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/opt/intel/compilers_and_libraries_2016.3.210/linux/compiler/include/stddef.h:
+
+/usr/include/xlocale.h:
+
+motif-in-common.h:
+
+motif-in-flags.h:
+
+scanned-sequence.h:
+
+string-match.h:

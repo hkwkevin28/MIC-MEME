@@ -1,0 +1,42 @@
+#ifndef MIC_MEME
+#define MIC_MEME
+
+#include <omp.h>
+#include "meme.h"
+#define MY_DEBUG_SUBSEQ7 
+//#define MY_DEBUG_MEME 
+//#define MY_DEBUG_STARTS 
+#define MY_NUM_THREADS 8
+typedef struct max_pair{
+  int max;
+  int max_j;
+  char pYic;
+}MaxPair;
+
+typedef struct taskinfo
+{
+  int flag;
+  int j_start;
+  int j_end;
+  int k_end;
+  int k_start;
+}TaskInfo;
+
+#pragma offload_attribute(push,target(mic))
+
+extern int micLmap[MAXALPH][MAXALPH];	
+extern uint8_t *res_buf;
+extern uint8_t *resic_buf;
+extern int *log_not_o_buf;
+
+extern int *sampleLengths;
+extern bool *skipArray;
+extern int maxLength;
+
+extern int * my_py;
+extern int * my_last_py;
+extern MaxPair * max_buf;
+extern TaskInfo* threadTasks;
+#pragma offload_attribute(pop)
+
+#endif 
